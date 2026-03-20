@@ -6,18 +6,10 @@ Description of the framework can be found in our [arxiv paper](https://arxiv.org
 
 1. Clone this repo
     ```
-    git clone git@github.com:psu-paws/TorchMPC.git
-    cd TorchMPC
-    git submodule init
-    git submodule update
+    git clone https://github.com/psu-paws/CrypTorch.git
+    cd CrypTorch
     ```
-
-    or if you have git version 2.13 or later
-
-    ```
-    git clone --recurse-submodules git@github.com:psu-paws/TorchMPC.git
-    cd TorchMPC
-    ```
+    
 2. Setup a virtual environment (Optional)
 
     We recommend setting up and activating a virtual environment ([venv](https://docs.python.org/3/library/venv.html), [conda](https://anaconda.org/), etc) to avoid installing packages globally and potentially causing conflicts. 
