@@ -186,7 +186,7 @@ def _mpc_runner(f, config, serialized_module, rank, world_size, *args):
     sp.load_config(config)
     f(module, rank, world_size, *args)
 
-def launch_mpc_processes(module, f, world_size=2, additional_arguments = None, *, init_method="tcp://127.0.0.1:8888"):
+def launch_mpc_processes(module, f, world_size=2, additional_arguments = None, *, init_method="tcp://127.0.0.1:50000"):
     # re-export
     import io
     serialized_module = io.BytesIO()

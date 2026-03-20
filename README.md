@@ -1,3 +1,8 @@
+<p align="center"><img width="80%" src="https://www.semicolontransistor.net/cryptorch/CrypTorchLogoText.png" alt="CrypTorch Logo" /></p>
+
+----------
+
+
 CrypTorch is an **MPC-based ML framework** built on top of PyTorch, developed and maintained by the [PAWS lab](https://github.com/psu-paws) @Penn State. CrypTorch enables you to run your **PyTorch-written ML program** using **multi-party computing (MPC)**, allowing model training and inference while ensuring the confidentiality of input data and model weights. 
 
 Description of the framework can be found in our [arxiv paper](https://arxiv.org/abs/2511.19711).
