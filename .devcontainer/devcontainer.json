@@ -1,12 +1,10 @@
 {
     "name": "TorchMPC Tutorial",
+    "image": "mcr.microsoft.com/devcontainers/python:3.12", 
     "customizations": {
         "vscode": {
-            "extensions": [
-                "ms-python.python",
-                "ms-toolsai.jupyter"
-            ]
+            "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
         }
     },
-    "postCreateCommand": "pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu;pip install -e ./CrypTen;pip install -e ."
+    "postCreateCommand": "pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu && pip install -e ./CrypTen && pip install -e ."
 }
