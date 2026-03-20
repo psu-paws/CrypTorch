@@ -1,6 +1,5 @@
 {
     "name": "TorchMPC Tutorial",
-    "image": "mcr.microsoft.com/devcontainers/python:3.10", 
     "customizations": {
         "vscode": {
             "extensions": [
