@@ -1,0 +1,72 @@
+communicator:
+  verbose: False
+  comm_backend: "gloo"
+  # comm_backend: "nccl"
+debug:
+  debug_mode: False
+  validation_mode: False
+encoder:
+  precision_bits: 16
+functions:
+  max_method: "log_reduction"
+  sqrt_method: "nr"
+
+  # softmax related
+  softmax_lower_thres: False
+  softmax_method: max
+
+  # exponential function
+  exp_method: "crypten"
+  exp_iterations: 8
+
+  # reciprocal configuration
+  reciprocal_method: "NR"
+  reciprocal_nr_iters: 10
+  reciprocal_log_iters: 1
+  reciprocal_all_pos: False
+  reciprocal_initial: "default"
+
+  # sqrt configuration
+  sqrt_nr_iters: 3
+  sqrt_nr_initial: null
+
+  # sigmoid / tanh configuration
+  sigmoid_tanh_method: "reciprocal"
+  sigmoid_tanh_terms: 32
+
+  # log configuration
+  log_iterations: 2
+  log_exp_iterations: 8
+  log_order: 8
+
+  # trigonometry configuration
+  trig_iterations: 10
+
+  # error function configuration:
+  erf_method: "crypten"
+  erf_iterations: 8
+
+  matmul: "cutlass"
+  conv: "cutlass"
+  # conv: "crypten"
+  # matmul: "crypten"
+
+  # maxpool: crypten
+  # max: crypten
+  # where: crypten
+
+  compare: "packed2"
+  # compare: crypten
+mpc:
+  active_security: False
+  provider: "TFP"
+  protocol: "beaver"
+  # truncation: "aby3"
+  # truncation: "rsst"
+  truncation: "crypten"
+  # truncation: "fake-exact"
+nn:
+  dpsmpc:
+    protocol: "layer_estimation"
+    skip_loss_forward: True
+    cache_pred_size: True

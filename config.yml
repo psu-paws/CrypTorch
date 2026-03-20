@@ -1,0 +1,20 @@
+ring:
+  size: 64
+  encoding_scale: 65536
+backend:
+  type: crypten-plus-plus
+  config:
+    communicator:
+      verbose: True
+      comm_backend: "gloo"
+    debug:
+      debug_mode: False
+      validation_mode: False
+    functions:
+      max_method: "log_reduction"
+      compare: "packed2"
+    mpc:
+      active_security: False
+      provider: "TFP"
+      protocol: "beaver"
+      truncation: "crypten" # options: crypten(local), rssi, abys3, exact, exact-fake(insecure, testing only)
