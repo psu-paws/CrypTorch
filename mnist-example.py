@@ -207,7 +207,7 @@ def main():
 
                 pos_x = x.abs()
                 relu_x = (pos_x + x) / 2
-                cond = pos_x <= 2.7
+                cond = pos_x <= 2.2
                 
                 gelu_p0 = pos_x * pos_x * a2 + pos_x * a1 + a0 + 0.5 * x
 
